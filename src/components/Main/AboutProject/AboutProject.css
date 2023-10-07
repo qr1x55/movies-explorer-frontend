@@ -1,0 +1,162 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.about__description {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 24px;
+  column-gap: 40px;
+  justify-items: start;
+  width: calc((1140 / 1280) * 100%);
+  margin: 72px 0 0 0;
+}
+
+.about__stages-title {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: normal;
+  letter-spacing: -0.8px;
+  margin: 0;
+  padding: 0;
+}
+
+.about__weeks-title {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: normal;
+  letter-spacing: -0.8px;
+  margin: 0;
+  padding: 0;
+}
+
+.about__stages-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.42;
+  margin: 0;
+  padding: 0;
+}
+
+.about__weeks-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.42;
+  margin: 0;
+  padding: 0;
+}
+
+.about__timeline {
+  display: grid;
+  grid-template-columns: 20% auto;
+  grid-auto-rows: 36px;
+  justify-items: center;
+  align-items: center;
+  width: calc((1140 / 1280) * 100%);
+  margin: 110px 0 105px 0;
+  font-size: 14px;
+}
+
+.about__timeline_backend-weeks {
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(61, 220, 132, 1);
+  width: 100%;
+  padding: 10px 0;
+}
+
+.about__timeline_frontend-weeks {
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(48, 48, 48, 1);
+  width: 100%;
+  padding: 10px 0;
+}
+
+.about__timeline_backend {
+  font-weight: 500;
+  line-height: normal;
+  color: #a0a0a0;
+  padding: 0;
+  margin: 8px 0 0 0;
+}
+
+.about__timeline_frontend {
+  font-weight: 500;
+  line-height: normal;
+  color: #a0a0a0;
+  padding: 0;
+  margin: 8px 0 0 0;
+}
+
+@media (max-width: 1279px) {
+  .about__description {
+    row-gap: 25px;
+    column-gap: 30px;
+    margin-top: 70px;
+  }
+
+  .about__timeline {
+    margin: 94px 0 85px 0;
+  }
+  
+  .about__stages-text {
+    font-size: 12px;
+  }
+
+  .about__weeks-text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  .about__title {
+    margin-top: 65px;
+  }
+
+  .about__description {
+    grid-template-columns: 1fr;
+    row-gap: 16px;
+    margin-top: 65px;
+  }
+
+  .about__timeline {
+    grid-template-columns: 35% auto;
+    margin: 59px 0 60px 0;
+    font-size: 11px;
+  }
+
+  .about__stages-title {
+    font-size: 18px;
+  }
+
+  .about__weeks-title {
+    grid-column: 1;
+    grid-row: 3;
+    font-size: 18px;
+    margin-top: 44px
+  }
+
+  .about__stages-text {
+    font-size: 11px;
+  }
+
+  .about__weeks-text {
+    font-size: 11px;
+  }
+
+  .about__timeline_backend {
+    margin-top: 0px;
+  }
+
+  .about__timeline_frontend {
+    margin-top: 0px;
+  }
+}

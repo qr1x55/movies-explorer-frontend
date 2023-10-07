@@ -1,0 +1,30 @@
+.movies {
+  width: 100%;
+}
+
+.movies__cards_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.movies__more-btn {
+  font-family: 'Inter', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  border-radius: 6px;
+  text-rendering: optimizeLegibility;
+  text-decoration: none;
+  letter-spacing: 0;
+  color: rgba(255, 255, 255, 1);
+  width: 100%;
+  height: 36px;
+  border: none;
+  background-color: rgba(47, 47, 47, 1);
+  padding: 0;
+  margin: 60px 0 80px 0;
+}

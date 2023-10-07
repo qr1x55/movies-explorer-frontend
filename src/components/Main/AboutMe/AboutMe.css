@@ -1,0 +1,138 @@
+.student {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(32, 32, 32, 1);
+}
+
+.student__info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: calc((1140 / 1280) * 100%);
+  margin: 66px 0 0 0;
+}
+
+.student__info_container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 100%;
+  margin: 0;
+}
+
+.student__info_name {
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 1.16;
+  color: rgba(255, 255, 255, 1);
+  letter-spacing: -2px;
+  margin: 0;
+  padding: 0;
+}
+
+.student__info_job {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1,11;
+  color: rgba(255, 255, 255, 1);
+  margin: 18px 0 0;
+  padding: 0;
+}
+
+.student__info_bio {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 1);
+  max-width: 600px;
+  margin: 26px 0 0 0;
+  padding: 0;
+}
+
+.student__info_github {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  color: rgba(255, 255, 255, 1);
+  margin: 99px 0 0 0;
+  padding: 0;
+}
+
+.student__info_photo {
+  width: 270px;
+  height: 327px;
+  border-radius: 10px;
+  margin-left: 49px;
+  object-fit: cover;
+}
+
+@media (max-width: 1279px) {
+  .student__info {
+    margin-top: 64px;
+  }
+
+  .student__info_name {
+    font-size: 40px;
+  }
+
+  .student__info_job {
+    font-size: 12px;
+    margin-top: 14px;
+  }
+
+  .student__info_bio {
+    font-size: 12px;
+    margin-top: 20px;
+  }
+
+  .student__info_photo {
+    width: 255px;
+    height: 307px;
+  }
+
+  .student__info_github {
+    margin-top: 87px;
+  }
+}
+
+@media (max-width: 767px) {
+  .student__title {
+    margin-top: 70px;
+  }
+
+  .student__info {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    width: calc((1145 / 1280) * 100%);
+  }
+
+  .student__info_name {
+    font-size: 30px;
+    margin-top: 40px;
+  }
+
+  .student__info_job {
+    font-size: 11px;
+    margin-top: 20px;
+  }
+
+  .student__info_bio {
+    font-size: 11px;
+    line-height: 1.45;
+    margin-top: 23px;
+  }
+
+  .student__info_photo {
+    width: 292px;
+    height: 352px;
+    margin-left: 0px;
+  }
+
+  .student__info_github {
+    margin-top: 40px;
+  }
+}
