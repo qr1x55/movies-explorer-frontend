@@ -1,18 +1,17 @@
 import './Profile.css';
-import Navigation from '../Navigation/Navigation';
-import ProfileForm from './ProfileForm/ProfleForm.jsx';
+import Header from '../Header/Header';
+import ProfileForm from './ProfileForm/ProfileForm.jsx';
 
 
 
 function ProfilePage({infoMessage}) {
   return (
-    <section className='profile__page'>
-      <div className='profile__page_container'>
-        <Navigation loggedIn={true}/>
+    <>
+      <Header loggedIn={true}/>
+      <main className='profile'>
         <ProfileForm infoMessage={infoMessage}/>
-      </div>
-    </section>
-
+      </main>
+    </>
   );
 };
 

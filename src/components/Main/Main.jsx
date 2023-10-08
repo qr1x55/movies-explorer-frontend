@@ -11,7 +11,7 @@ import './Main.css'
 function Main() {
   return (
     <>
-      <Header/>
+      <Header isMain={true}/>
       <main className="main">
         <Promo/>
         <AboutProject/>
@@ -19,7 +19,7 @@ function Main() {
         <AboutMe/>
         <Portfolio/>
       </main>
-      <Footer/>
+      <Footer isMain={true}/>
     </>
   );
 }

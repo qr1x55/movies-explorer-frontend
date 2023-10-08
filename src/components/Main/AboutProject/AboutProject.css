@@ -60,7 +60,7 @@
   font-size: 14px;
 }
 
-.about__timeline_backend-weeks {
+.about__backend-weeks {
   font-weight: 400;
   line-height: normal;
   text-align: center;
@@ -70,7 +70,7 @@
   padding: 10px 0;
 }
 
-.about__timeline_frontend-weeks {
+.about__frontend-weeks {
   font-weight: 400;
   line-height: normal;
   text-align: center;
@@ -80,7 +80,7 @@
   padding: 10px 0;
 }
 
-.about__timeline_backend {
+.about__backend {
   font-weight: 500;
   line-height: normal;
   color: #a0a0a0;
@@ -88,7 +88,7 @@
   margin: 8px 0 0 0;
 }
 
-.about__timeline_frontend {
+.about__frontend {
   font-weight: 500;
   line-height: normal;
   color: #a0a0a0;
@@ -152,11 +152,11 @@
     font-size: 11px;
   }
 
-  .about__timeline_backend {
+  .about__backend {
     margin-top: 0px;
   }
 
-  .about__timeline_frontend {
+  .about__frontend {
     margin-top: 0px;
   }
 }

@@ -1,2 +1,8 @@
 @import url(./vendor/normalize.css);
 @import url(./vendor/fonts/fonts.css);
+
+body {
+  background-color: rgba(32, 32, 32, 1);
+}
+
+/* * { outline: 1px solid red; }  */

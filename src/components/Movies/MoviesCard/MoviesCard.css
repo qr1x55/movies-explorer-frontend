@@ -1,4 +1,4 @@
-.movies__card_item {
+.movies__card-item {
   display: flex;
   flex-direction: column;
   width: 360px;
@@ -9,7 +9,7 @@
   border-radius: 6px;
 }
 
-.movies__card_description {
+.movies__card-description {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -18,7 +18,7 @@
   padding: 0;
 }
 
-.movies__card_title {
+.movies__card-title {
   font-size: 15px;
   font-style: normal;
   font-weight: 500;
@@ -34,8 +34,7 @@
   padding: 0;
 }
 
-.movies__cards_duration {
-  font-family: Inter;
+.movies__card-duration {
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
@@ -46,7 +45,7 @@
   text-align: right;
 }
 
-.movies__cards_like-btn {
+.movies__card-like-btn {
   width: 100px;
   height: 29px; 
   align-self: center;
@@ -62,12 +61,12 @@
   padding: 0;
 }
 
-.movies__cards_like-btn::before {
+.movies__card-like-btn::before {
   content: "Сохранить";
 }
 
-.movies__card_trailer-link {
-  width: 360px;
+.movies__card-trailer-link {
+  width: 100%;
   height: 200px;
   margin: 0;
   padding: 0;
@@ -75,23 +74,23 @@
   line-height: 0;
 }
 
-.movies__card_image {
-  width: 360px;
+.movies__card-image {
+  width: 100%;
   height: 200px;
   object-fit: cover;
   margin: 0;
   padding: 0;
 }
 
-.movies__cards_like-btn_active {
+.movies__card-like-btn_active {
   background-image: url('../../../images/saved-btn.svg');
 }
 
-.movies__cards_like-btn_active::before {
+.movies__card-like-btn_active::before {
   content: none;
 }
 
-.movies__cards_delete-btn {
+.movies__card-delete-btn {
   width: 100px;
   height: 29px; 
   align-self: center;
@@ -106,4 +105,61 @@
   font-weight: 400;
   line-height: 1;
   padding: 0;
+}
+
+
+@media(max-width: 768px) {
+  .movies__card-item {
+    width: 342px;
+    height: 309px;
+  }
+
+  .movies__card-trailer-link {
+    height: 190px;
+  }
+
+  .movies__card-image {
+    height: 190px;
+  }
+}
+
+@media(max-width: 767px) {
+  .movies__card-item {
+    width: 300px;
+    height: 271px;
+  }
+
+  .movies__card-trailer-link {
+    height: 168px;
+  }
+
+  .movies__card-image {
+    height: 168px;
+  }
+
+  .movies__card-description {
+    margin: 14px;
+  }
+
+  .movies__card-title {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  .movies__card-duration {
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.8;
+  }
+
+  .movies__card-like-btn {
+    margin: 14px auto 14px auto;
+  }
+
+  .movies__card-delete-btn {
+    margin: 14px auto 14px auto;
+  }
 }

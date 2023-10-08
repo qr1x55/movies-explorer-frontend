@@ -16,11 +16,11 @@ function MoviesCardList({ savedPage, onDelete }) {
   ));
 
   return (
-    <section className='movies__cards'>
-      <ul className='movies__cards_list'>
+    <div className='movies__cards-container'>
+      <ul className='movies__cards-list'>
         {cards}
       </ul>
-    </section>
+    </div>
   );
 }
 

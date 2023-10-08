@@ -5,6 +5,9 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+}
+
+.footer_type_main {
   margin-top: 125px;
 }
 
@@ -54,13 +57,13 @@
 }
 
 @media (max-width: 1279px) {
-  .footer {
+  .footer_type_main {
     margin-top: 90px;
   }
 }
 
 @media (max-width: 540px) {
-  .footer {
+  .footer_type_main {
     margin-top: 70px;
   }
 
@@ -72,6 +75,7 @@
     flex-direction: column;
     gap: 12px;
     margin-top: 30px;
+    padding: 0;
   }
 
   .footer__link {

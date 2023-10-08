@@ -10,38 +10,38 @@ function Portfolio() {
           <ul className='portfolio__list'>
             <li className='portfolio__item'>
               <a
-                className='portfolio__item_link link'
+                className='portfolio__link link'
                 href='https://qr1x55.github.io/russian-travel/index.html#'
                 target='_blank' rel="noreferrer"
               >
-                <p className='portfolio__item_text'>
+                <p className='portfolio__text'>
                   Статичный сайт
                 </p>
-                <p className='portfolio__item_arrow'>↗</p>
+                <p className='portfolio__arrow'>↗</p>
               </a>
             </li>
             <li className='portfolio__item'>
               <a
-                className='portfolio__item_link link'
+                className='portfolio__link link'
                 href='https://qr1x55.github.io/russian-travel/index.html#'
                 target='_blank' rel="noreferrer"
               >
-                <p className='portfolio__item_text'>
+                <p className='portfolio__text'>
                   Адаптивный сайт
                 </p>
-                <p className='portfolio__item_arrow'>↗</p>
+                <p className='portfolio__arrow'>↗</p>
               </a>
             </li>
             <li className='portfolio__item'>
               <a
-                className='portfolio__item_link link'
+                className='portfolio__link link'
                 href='https://qr1x55.github.io/russian-travel/index.html#'
                 target='_blank' rel="noreferrer"
               >
-                <p className='portfolio__item_text'>
+                <p className='portfolio__text'>
                   Одностраничное приложение
                 </p>
-                <p className='portfolio__item_arrow'>↗</p>
+                <p className='portfolio__arrow'>↗</p>
               </a>
             </li>
           </ul>

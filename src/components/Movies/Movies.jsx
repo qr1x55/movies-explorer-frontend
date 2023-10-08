@@ -2,21 +2,23 @@ import React from 'react';
 import './Movies.css';
 import SearchForm from './SearchForm/SearchForm.jsx';
 import MoviesCardList from './MoviesCardList/MoviesCardList';
-import Navigation from '../Navigation/Navigation';
 import Footer from '../Footer/Footer';
+import Header from '../Header/Header';
 
 
 function Movies() {
   return (
-    <main className='movies'>
-      <Navigation loggedIn={true}/>
-      <SearchForm/>
-      <section className='movies__cards_container'>
-        <MoviesCardList/>
-        <button className='movies__more-btn'>Ещё</button>
-      </section>
+    <>
+      <Header loggedIn={true}/>
+      <main className='movies'>
+        <SearchForm/>
+        <section className='movies__cards'>
+          <MoviesCardList/>
+          <button className='movies__more-btn button' type='button' aria-label='Показать еще'>Ещё</button>
+        </section>
+      </main>
       <Footer/>
-    </main>
+    </>
   );
 }
 

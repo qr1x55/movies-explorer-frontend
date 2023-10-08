@@ -14,28 +14,28 @@ function MoviesCard({ card, savedPage }) {
 
   function classCardBtn() {
     if (isSaved && savedPage) {
-      return 'movies__cards_delete-btn'
+      return 'movies__card-delete-btn'
     } else if (isSaved && !savedPage) {
-      return 'movies__cards_like-btn movies__cards_like-btn_active'
+      return 'movies__card-like-btn movies__card-like-btn_active'
     } else {
-      return 'movies__cards_like-btn'
+      return 'movies__card-like-btn'
     }
   }
 
   return (
-    <li className='movies__card_item'>
-      <div className='movies__card_description'>
-        <h3 className='movies__card_title'>{nameRU}</h3>
-        <p className='movies__cards_duration'>{durationHoursMins}</p>
+    <li className='movies__card-item'>
+      <div className='movies__card-description'>
+        <h2 className='movies__card-title'>{nameRU}</h2>
+        <p className='movies__card-duration'>{durationHoursMins}</p>
       </div>
       <a
-        className='movies__card_trailer-link link'
+        className='movies__card-trailer-link link'
         href={card.trailer}
         target='_blank'
         rel='noreferrer'
       >
         <img
-          className='movies__card_image'
+          className='movies__card-image'
           alt={nameRU} 
           src={thumbnail}
         />

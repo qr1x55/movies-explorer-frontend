@@ -14,7 +14,7 @@
   margin: 66px 0 0 0;
 }
 
-.student__info_container {
+.student__container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -23,7 +23,7 @@
   margin: 0;
 }
 
-.student__info_name {
+.student__name {
   font-weight: 400;
   font-size: 50px;
   line-height: 1.16;
@@ -33,7 +33,7 @@
   padding: 0;
 }
 
-.student__info_job {
+.student__job {
   font-weight: 500;
   font-size: 18px;
   line-height: 1,11;
@@ -42,7 +42,7 @@
   padding: 0;
 }
 
-.student__info_bio {
+.student__bio {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.55;
@@ -52,7 +52,7 @@
   padding: 0;
 }
 
-.student__info_github {
+.student__github {
   font-weight: 500;
   font-size: 14px;
   line-height: 14px;
@@ -61,7 +61,7 @@
   padding: 0;
 }
 
-.student__info_photo {
+.student__photo {
   width: 270px;
   height: 327px;
   border-radius: 10px;
@@ -74,26 +74,26 @@
     margin-top: 64px;
   }
 
-  .student__info_name {
+  .student__name {
     font-size: 40px;
   }
 
-  .student__info_job {
+  .student__job {
     font-size: 12px;
     margin-top: 14px;
   }
 
-  .student__info_bio {
+  .student__bio {
     font-size: 12px;
     margin-top: 20px;
   }
 
-  .student__info_photo {
+  .student__photo {
     width: 255px;
     height: 307px;
   }
 
-  .student__info_github {
+  .student__github {
     margin-top: 87px;
   }
 }
@@ -110,29 +110,29 @@
     width: calc((1145 / 1280) * 100%);
   }
 
-  .student__info_name {
+  .student__name {
     font-size: 30px;
     margin-top: 40px;
   }
 
-  .student__info_job {
+  .student__job {
     font-size: 11px;
     margin-top: 20px;
   }
 
-  .student__info_bio {
+  .student__bio {
     font-size: 11px;
     line-height: 1.45;
     margin-top: 23px;
   }
 
-  .student__info_photo {
+  .student__photo {
     width: 292px;
     height: 352px;
     margin-left: 0px;
   }
 
-  .student__info_github {
+  .student__github {
     margin-top: 40px;
   }
 }

@@ -2,6 +2,7 @@
   padding: 70px 0;
   margin: 0 auto;
   max-width: 396px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -111,6 +112,7 @@
   line-height: 17px;
   text-align: center;
   color: #A0A0A0;
+  margin: 0;
 }
 
 .signform__link {

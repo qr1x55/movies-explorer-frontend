@@ -25,7 +25,7 @@ function SignForm({
     return (
         <main className='signform'>
             <Logo />
-            <h2 className='signform__title'>{title}</h2>
+            <h1 className='signform__title'>{title}</h1>
             <form className='signform__form' onSubmit={handleSubmit}>
                 <div className='signform__inputs'>
                     {type === 'signup' && (

@@ -12,17 +12,17 @@ function SearchForm() {
             placeholder='Фильм'
             required
           />
-          <button className='search__button button'>Поиск</button>
+          <button className='search__button button' type='submit'>Поиск</button>
         </div>
-        <div className='search__short_container'>
-          <label className='search__short_switch'>
+        <div className='search-short'>
+          <label className='search__short-switch'>
             <input
               className='search__checkbox'
               type='checkbox'
             />
             <span className='search__slider search__slider_round'></span>
           </label>
-          <p className='search__short_text'>Короткометражки</p>
+          <p className='search__short-text'>Короткометражки</p>
         </div>
       </fieldset>
     </form>

@@ -8,13 +8,13 @@ function NotFound() {
   };
 
   return (
-    <section className='not-found'>
-      <div className='not-found__container'>
-        <h2 className='not-found__title'>404</h2>
+    <main className='not-found'>
+      <section className='not-found__container'>
+        <h1 className='not-found__title'>404</h1>
         <p className='not-found__subtitle'>Страница не найдена</p>
-      </div>
+      </section>
       <Link onClick={handleClick} className='not-found__link link'>Назад</Link>
-    </section>
+    </main>
   );
 };
   

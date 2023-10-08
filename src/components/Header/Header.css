@@ -1,6 +1,11 @@
 .header {
   min-height: 56px;
-  background-color: rgba(7, 48, 66, 1);
+  background-color: rgba(32, 32, 32, 1);
   margin: 0 auto;
+  width: 100%;
   padding-top: 18px;
+}
+
+.header_type_main {
+  background-color: rgba(7, 48, 66, 1);
 }

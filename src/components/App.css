@@ -1,5 +1,4 @@
 #root {
-  background-color: rgba(32, 32, 32, 1);
   font-family: 'Inter', Arial, sans-serif;
   font-style: normal;
   color: rgba(255, 255, 255, 1);
@@ -9,6 +8,10 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
 }
 
 .root {

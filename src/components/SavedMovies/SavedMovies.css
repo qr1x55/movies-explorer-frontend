@@ -1,8 +1,8 @@
-.saved-movies {
+.movies {
   width: 100%;
 }
 
-.saved-movies__cards_container {
+.movies__cards {
   display: flex;
   flex-direction: column;
   align-items: center;

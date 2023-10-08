@@ -30,9 +30,9 @@ function Tooltip({isShown, message, code, type}) {
     }, [code, message, type]);
   
     return (
-      <div className='tooltip__message'>
+      <div className='message'>
         {isShown && (
-          <p className={`tooltip__message_text ${code === SUCCESSFUL_CODE &&'tooltip__message_success'}`}>
+          <p className={`message__text ${code === SUCCESSFUL_CODE &&'message_success'}`}>
             {textMessage}
           </p>
         )}

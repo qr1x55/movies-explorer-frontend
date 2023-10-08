@@ -2,10 +2,9 @@
   box-sizing: border-box;
   display: flex;
   width: 90%;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   color: #000;
-  justify-content: flex-end;
 }
 
 .menu__cover {
@@ -31,18 +30,21 @@
 .menu__box {
   box-sizing: border-box;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-end;
   width: 100%;
-  gap: 16px;
+  gap: 20px;
   justify-self: center;
+  margin-right: 50px;
 }
 
 .menu__film-link {
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
   font-weight: 400;
-  font-size: 13px;
-  line-height: 18px;
-  color: #FFFFFF;
+  line-height: 1.28;
+  color: rgba(255, 255, 255, 1);
 }
 
 .menu__film-link:first-of-type {
@@ -50,7 +52,7 @@
 }
 
 .menu__film-link.active {
-  border-bottom: 2px solid #ffffff;
+  font-weight: 600;
 }
 
 .menu__links {
@@ -143,12 +145,23 @@
     width: auto;
   }
 
+  .menu__box {
+    align-items: center;
+    justify-content: center;
+    margin-right: 0px;
+  }
+
   .menu__link {
     margin-bottom: 12px;
   }
 
   .menu__link_type_profile {
     display: none;
+  }
+
+  .menu__film-link.active {
+    font-weight: 400;
+    border-bottom: 2px solid #ffffff;
   }
 
   .menu__link_type_profile_active {
@@ -167,7 +180,7 @@
     content: '';
     display: block;
     bottom: -7px;
-    right: -42px;
+    right: -32px;
     position: absolute;
     width: 30px;
     height: 30px;
@@ -208,7 +221,7 @@
     flex-direction: column;
     justify-content: flex-start;
     background-color: #202020;
-    padding: 0 0 90px;
+    padding: 0 0 90px 0px;
     flex-grow: 1;
     transition: right .5s ease-in;
     z-index: 100;
@@ -240,8 +253,10 @@
 
 @media (max-width: 578px) {
   .menu__box {
-    padding-bottom: 60px;
+    padding-bottom: 58px;
+    gap: 24px;
   }
+
   .menu__links {
     align-items: center;
   }
@@ -254,11 +269,11 @@
     margin-bottom: 0;
   }
 
-  .menu__btn_type_close {
+  .menu__btn_close {
     padding: 8px;
   }
 
-  .menu__link_type_signin {
+  .menu__link_signin {
     width: 54px;
     height: 26px;
     font-size: 10px;
@@ -267,9 +282,10 @@
 
   .menu__link_type_profile_active {
     font-size: 14px;
+    margin-right: 47px;
   }
 
   .menu__film-link:first-of-type {
-    margin-top: 142px;
+    margin-top: 144px;
   }
 }

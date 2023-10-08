@@ -10,7 +10,7 @@
   margin: 100px 0 0;
 }
 
-.techs__description_title {
+.techs__description-title {
   font-weight: 400;
   font-size: 50px;
   line-height: 1.16;
@@ -20,7 +20,7 @@
   padding: 0;
 }
 
-.techs__description_text {
+.techs__description-text {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -42,7 +42,7 @@
   list-style: none;
 }
 
-.techs__stack_item {
+.techs__stack-item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,11 +65,11 @@
     margin-top: 90px;
   }
 
-  .techs__description_title {
+  .techs__description-title {
     margin-top: 80px;
   }
 
-  .techs__description_text {
+  .techs__description-text {
     font-size: 12px;
     margin-top: 20px;
   }
@@ -78,7 +78,7 @@
     margin: 83px 0 90px 0;
   }
 
-  .techs__stack_item {
+  .techs__stack-item {
     width: 84px;
     height: 57px;
     font-size: 12px;
@@ -94,13 +94,13 @@
     margin-top: 64px;
   }
 
-  .techs__description_title {
+  .techs__description-title {
     margin-top: 62px;
     font-size: 30px;
     letter-spacing: -1.2px;
   }
 
-  .techs__description_text {
+  .techs__description-text {
     font-size: 11px;
   }
 
