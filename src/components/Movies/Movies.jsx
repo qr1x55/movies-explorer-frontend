@@ -11,8 +11,8 @@ function Movies() {
     <>
       <Header loggedIn={true}/>
       <main className='movies'>
-        <SearchForm/>
         <section className='movies__cards'>
+          <SearchForm/>
           <MoviesCardList/>
           <button className='movies__more-btn button' type='button' aria-label='Показать еще'>Ещё</button>
         </section>
