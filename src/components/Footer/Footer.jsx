@@ -7,10 +7,10 @@ function Footer({ isMain }) {
       <p className='footer__info'>Учебный проект Яндекс.Практикум х BeatFilm.</p>
       <div className={`footer__bottom`}>
         <p className="footer__copyright">&copy; 2023</p>
-        <ul className='footer__link-container'>
+        <div className='footer__link-container'>
           <a href='https://practicum.yandex.ru/' target='_blank' rel="noreferrer" className='footer__link link'>Яндекс.Практикум</a>
           <a href='https://github.com/qr1x55' target='_blank' rel="noreferrer" className='footer__link link'>Github</a>
-        </ul>
+        </div>
       </div>
     </footer>
   );

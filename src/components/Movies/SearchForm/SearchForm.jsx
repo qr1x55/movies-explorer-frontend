@@ -15,7 +15,7 @@ function SearchForm() {
           <button className='search__button button' type='submit'>Поиск</button>
         </div>
         <div className='search-short'>
-          <label className='search__short-switch'>
+          <label className='search__short-switch button'>
             <input
               className='search__checkbox'
               type='checkbox'

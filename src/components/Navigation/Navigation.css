@@ -39,7 +39,6 @@
 }
 
 .menu__film-link {
-  font-family: Inter;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -273,11 +272,12 @@
     padding: 8px;
   }
 
-  .menu__link_signin {
+  .menu__link_type_signin {
     width: 54px;
     height: 26px;
     font-size: 10px;
     line-height: 16px;
+    margin-right: 0;
   }
 
   .menu__link_type_profile_active {

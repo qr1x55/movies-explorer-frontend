@@ -14,11 +14,11 @@ function MoviesCard({ card, savedPage }) {
 
   function classCardBtn() {
     if (isSaved && savedPage) {
-      return 'movies__card-delete-btn'
+      return 'movies__card-delete-btn button'
     } else if (isSaved && !savedPage) {
-      return 'movies__card-like-btn movies__card-like-btn_active'
+      return 'movies__card-like-btn movies__card-like-btn_active button'
     } else {
-      return 'movies__card-like-btn'
+      return 'movies__card-like-btn button'
     }
   }
 
