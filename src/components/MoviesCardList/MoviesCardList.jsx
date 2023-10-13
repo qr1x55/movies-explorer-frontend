@@ -2,19 +2,19 @@ import React, { useEffect, useState } from 'react';
 import './MoviesCardList.css';
 import { useLocation } from 'react-router-dom';
 import { 
-  MaxScreen,
-  MediumScreen,
-  SmallScreen,  
-  CountAboveMaxScreen,  
-  CountLessMaxScreen,  
-  CountMediumScreen, 
-  CountSmallScreen,  
-  StepMaxScreen,  
-  StepMediumScreen, 
-  StepSmallScreen
- } from '../../../utils/constants';
-import Preloader from '../../Preloader/Preloader';
-import MoviesCard from '../MoviesCard/MoviesCard';
+  MAX_SCREEN,
+  MEDIUM_SCREEN, 
+  SMALL_SCREEN,
+  COUNT_ABOVE_MAX, 
+  COUNT_LESS_MAX,
+  COUNT_MEDIUM,
+  COUNT_SMALL,
+  STEP_MAX,
+  STEP_MEDIUM,
+  STEP_SMALL
+ } from '../../utils/constants';
+import Preloader from '../Preloader/Preloader';
+import MoviesCard from './MoviesCard/MoviesCard';
 
 function MoviesCardList({ movies, addMovie, onDelete, savedMovies, isLoading, serverError, firstRender }) {
   const {pathname} = useLocation();
@@ -22,18 +22,18 @@ function MoviesCardList({ movies, addMovie, onDelete, savedMovies, isLoading, se
   const fact = movies.slice(0, count)
 
   function renderMovies() {
-    const counter = { init: CountAboveMaxScreen, step: StepMaxScreen }
-    if (window.innerWidth < MaxScreen) {
-      counter.init = CountLessMaxScreen
-      counter.step = StepMediumScreen
+    const counter = { init: COUNT_ABOVE_MAX, step: STEP_MAX }
+    if (window.innerWidth < MAX_SCREEN) {
+      counter.init = COUNT_LESS_MAX
+      counter.step = STEP_MEDIUM
     }
-    if (window.innerWidth < MediumScreen) {
-      counter.init = CountMediumScreen
-      counter.step = StepSmallScreen
+    if (window.innerWidth < MEDIUM_SCREEN) {
+      counter.init = COUNT_MEDIUM
+      counter.step = STEP_SMALL
     }
-    if (window.innerWidth < SmallScreen) {
-      counter.init = CountSmallScreen
-      counter.step = StepSmallScreen
+    if (window.innerWidth < SMALL_SCREEN) {
+      counter.init = COUNT_SMALL
+      counter.step = STEP_SMALL
     }
     return counter
   }
@@ -42,16 +42,16 @@ function MoviesCardList({ movies, addMovie, onDelete, savedMovies, isLoading, se
     if (pathname === '/movies') {
       setCount(renderMovies().init)
       function renderForScreen() {
-        if (window.innerWidth >= MaxScreen) {
+        if (window.innerWidth >= MAX_SCREEN) {
           setCount(renderMovies().init)
         }
-        if (window.innerWidth < MaxScreen) {
+        if (window.innerWidth < MAX_SCREEN) {
           setCount(renderMovies().init)
         }
-        if (window.innerWidth < MediumScreen) {
+        if (window.innerWidth < MEDIUM_SCREEN) {
           setCount(renderMovies().init)
         }
-        if (window.innerWidth < SmallScreen) {
+        if (window.innerWidth < SMALL_SCREEN) {
           setCount(renderMovies().init)
         }
       }
@@ -97,7 +97,7 @@ function MoviesCardList({ movies, addMovie, onDelete, savedMovies, isLoading, se
         : <span className='movies__error'>Нет сохраненных фильмов</span>
         }
       </ul>
-      {pathname === '/movies' && <button onClick={renderMore} className='movies__more-btn button' type='button' aria-label='Показать еще'>Ещё</button>}
+      {pathname === '/movies' && <button onClick={renderMore} className={`movies__more-btn ${count >= movies.length ? 'movies__more-btn_hidden' : ''} button`} type='button' aria-label='Показать еще'>Ещё</button>}
     </div>
   );
 }

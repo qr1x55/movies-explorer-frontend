@@ -99,6 +99,7 @@
 .signform__submit-btn:disabled {
   opacity: .2;
   cursor: default;
+  pointer-events: none;
 }
 
 .signform__footer {

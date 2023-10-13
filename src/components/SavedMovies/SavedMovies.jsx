@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import MoviesCardList from '../Movies/MoviesCardList/MoviesCardList';
-import SearchForm from '../Movies/SearchForm/SearchForm';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import MoviesCardList from '../MoviesCardList/MoviesCardList';
+import SearchForm from '../SearchForm/SearchForm.jsx'
 import './SavedMovies.css';
 
 export default function SavedMovies({ setIsError, savedMovies, onDelete }) {

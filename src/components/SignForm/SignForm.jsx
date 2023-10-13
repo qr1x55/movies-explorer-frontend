@@ -3,8 +3,9 @@ import Logo from '../Logo/Logo';
 import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useFormValidator } from '../../hooks/useFormValidator';
-import { EmailRegex } from '../../utils/constants';
+import { EMAIL_REGEX } from '../../utils/constants';
 import { ErrorContext } from '../../contexts/ErrorContext';
+import { SendContext } from '../../contexts/SendContext';
 
 function SignForm({
     type,
@@ -18,6 +19,7 @@ function SignForm({
 }) {
     const { values, errors, isValid, handleChange } = useFormValidator();
     const isError = useContext(ErrorContext);
+    const isSend = useContext(SendContext);
 
     useEffect(() => {
       setIsError(false)
@@ -30,8 +32,12 @@ function SignForm({
         } else {
           onSubmit(values.email, values.password)
         }
-        
     };
+
+    function inputChange(e) {
+      setIsError(false)
+      handleChange(e)
+    }
 
     return (
         <main className='signform'>
@@ -52,7 +58,7 @@ function SignForm({
                                 placeholder="Введите ваше имя"
                                 title="Введите ваше имя"
                                 value={values.username || ''}
-                                onChange={handleChange}
+                                onChange={inputChange}
                                 
                             />
                             <span id='name-error' className='signform__error'>
@@ -68,12 +74,12 @@ function SignForm({
                             name='email'
                             minLength='2'
                             maxLength='30'
-                            pattern={EmailRegex}
+                            pattern={EMAIL_REGEX}
                             required
                             placeholder="Укажите ваш email"
                             title="Укажите ваш email"
                             value={values.email || ''}
-                            onChange={handleChange}
+                            onChange={inputChange}
 
                         />
                         <span id='email-error' className='signform__error'>
@@ -90,7 +96,7 @@ function SignForm({
                             maxLength='15'
                             required
                             value={values.password || ''}
-                            onChange={handleChange}
+                            onChange={inputChange}
                             placeholder="Введите пароль"
                             title="Введите пароль"
                         />
@@ -110,9 +116,9 @@ function SignForm({
                   </div>
                 )}
                 <button
-                    className={`signform__submit-btn link ${type === 'signup' && 'signform__login-btn'}`}
+                    className={`signform__submit-btn button ${type === 'signup' && 'signform__login-btn'}`}
                     type='submit'
-                    disabled={!isValid}
+                    disabled={!isValid || isSend || isError}
                 > {btnName}
                 </button>
             </form>

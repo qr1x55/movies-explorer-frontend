@@ -1,31 +1,31 @@
-const BASE_URL = 'api.qr1xmovie.students.nomoredomainsrocks.ru';
+const BASE_URL = 'https://api.qr1xmovie.students.nomoredomainsrocks.ru';
 const MOVIES_URL = 'https://api.nomoreparties.co/beatfilm-movies';
 
-const EmailRegex = "^\\S+@\\S+\\.\\S+$"
+const EMAIL_REGEX = "^\\S+@\\S+\\.\\S+$"
 
-const MaxScreen = 1560;
-const MediumScreen = 1170;
-const SmallScreen = 640;
-const CountAboveMaxScreen = 16;
-const CountLessMaxScreen = 12;
-const CountMediumScreen = 8;
-const CountSmallScreen = 5;
-const StepMaxScreen = 4;
-const StepMediumScreen = 3;
-const StepSmallScreen = 2;
+const MAX_SCREEN = 1560;
+const MEDIUM_SCREEN = 1170;
+const SMALL_SCREEN = 640;
+const COUNT_ABOVE_MAX = 16;
+const COUNT_LESS_MAX = 12;
+const COUNT_MEDIUM = 8;
+const COUNT_SMALL = 5;
+const STEP_MAX = 4;
+const STEP_MEDIUM = 3;
+const STEP_SMALL = 2;
 
 export {
   BASE_URL,
   MOVIES_URL,
-  EmailRegex,
-  MaxScreen,
-  MediumScreen,
-  SmallScreen,  
-  CountAboveMaxScreen,  
-  CountLessMaxScreen,  
-  CountMediumScreen, 
-  CountSmallScreen,  
-  StepMaxScreen,  
-  StepMediumScreen, 
-  StepSmallScreen
+  EMAIL_REGEX,
+  MAX_SCREEN,
+  MEDIUM_SCREEN, 
+  SMALL_SCREEN,
+  COUNT_ABOVE_MAX, 
+  COUNT_LESS_MAX,
+  COUNT_MEDIUM,
+  COUNT_SMALL,
+  STEP_MAX,
+  STEP_MEDIUM,
+  STEP_SMALL
 };

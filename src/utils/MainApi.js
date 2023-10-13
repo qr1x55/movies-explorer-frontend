@@ -1,3 +1,7 @@
+import { BASE_URL } from '../utils/constants'
+
+
+
 class MainApi {
   constructor(data){
     this._baseUrl = data.baseUrl;
@@ -114,7 +118,7 @@ class MainApi {
 }
 
 const mainApi = new MainApi({
-  baseUrl: 'https://api.qr1xmovie.students.nomoredomainsrocks.ru',
+  baseUrl: BASE_URL,
 });
 
 export default mainApi

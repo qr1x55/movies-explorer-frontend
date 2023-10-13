@@ -2,13 +2,15 @@ import './ProfileForm.css';
 import React, { useContext, useEffect } from 'react';
 import {useFormValidator} from '../../../hooks/useFormValidator';
 import { CurrentUserContext } from '../../../contexts/CurrentUserContext';
-import { EmailRegex } from '../../../utils/constants';
+import { EMAIL_REGEX } from '../../../utils/constants';
 import { ErrorContext } from '../../../contexts/ErrorContext';
+import { SendContext } from '../../../contexts/SendContext';
 
 
 function ProfileForm({ onSignOut, onEdit, isSuccess, setIsSuccess}) {
   const currentUser = useContext(CurrentUserContext);
   const isError = useContext(ErrorContext);
+  const isSend = useContext(SendContext);
 
   const {values, setValue, errors, isValid, setIsValid, handleChange} = useFormValidator();
   const [isInputActive, setIsInputActive] = React.useState(false);
@@ -77,7 +79,7 @@ function ProfileForm({ onSignOut, onEdit, isSuccess, setIsSuccess}) {
             name='email'
             minLength='2'
             maxLength='30'
-            pattern={EmailRegex}
+            pattern={EMAIL_REGEX}
             required
             id='email'
             disabled={!isInputActive}
@@ -96,7 +98,7 @@ function ProfileForm({ onSignOut, onEdit, isSuccess, setIsSuccess}) {
             <button
               className={`profile__btn profile__btn_type_submit button`}
               type='submit'
-              disabled={!isValid}
+              disabled={!isValid || isSend || isError}
             >
               Сохранить
             </button>

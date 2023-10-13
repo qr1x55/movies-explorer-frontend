@@ -1,9 +1,9 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import './Movies.css';
-import SearchForm from './SearchForm/SearchForm.jsx';
-import MoviesCardList from './MoviesCardList/MoviesCardList';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
+import MoviesCardList from '../MoviesCardList/MoviesCardList';
+import SearchForm from '../SearchForm/SearchForm.jsx'
 import { getMovies } from '../../utils/MoviesApi';
 
 
@@ -27,7 +27,6 @@ function Movies({ addMovie, setIsError, savedMovies }) {
     }))
   }, [])
 
-  
   function searchMovies(search) {
     if (allMovies.length === 0) {
       setIsLoading(true)
@@ -50,8 +49,8 @@ function Movies({ addMovie, setIsError, savedMovies }) {
   }
 
   useEffect(() => {
-    if (localStorage.allMovies && localStorage.shorts && localStorage.movie) {
-      const movies = JSON.parse(localStorage.allMovies)
+    if (localStorage.allmovies && localStorage.shorts && localStorage.movie) {
+      const movies = JSON.parse(localStorage.allmovies)
       const search = JSON.parse(localStorage.movie)
       const isShort = JSON.parse(localStorage.shorts)
       setServerError(false)

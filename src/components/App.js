@@ -75,7 +75,7 @@ function App() {
         setIsError(true)
         console.error(`Ошибка при регистрации ${error}`)
       })
-      .finally(() => setIsSend(false))
+      .finally(() => {setIsSend(false)})
   }
 
   function editUser(name, email) {

@@ -48,6 +48,10 @@
   margin: 60px 0 80px 0;
 }
 
+.movies__more-btn_hidden {
+  visibility: hidden;
+}
+
 @media (max-width: 1560px) {
   .movies__cards-list {
     grid-template-columns: repeat(3, 1fr);

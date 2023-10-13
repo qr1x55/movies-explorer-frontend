@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import './SearchForm.css';
-import { ErrorContext } from '../../../contexts/ErrorContext';
-import { useFormValidator } from '../../../hooks/useFormValidator';
+import { ErrorContext } from '../../contexts/ErrorContext';
+import { useFormValidator } from '../../hooks/useFormValidator';
 import { useLocation } from 'react-router-dom';
 
 function SearchForm({ isShort, searchMovies, searchedMovie, toggleShort, setIsError, firstRender, savedMovies}) {
@@ -54,6 +54,7 @@ function SearchForm({ isShort, searchMovies, searchedMovie, toggleShort, setIsEr
             <input
               className='search__checkbox'
               type='checkbox'
+              name='short-switch'
               checked={isShort}
               onChange={() => toggleShort()}
               disabled={firstRender}
