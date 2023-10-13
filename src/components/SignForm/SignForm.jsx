@@ -100,8 +100,8 @@ function SignForm({
                     </label>
                 </div>
                 {type === 'signup' && (
-                  <div className='signform__message-container'>
-                    <span className={`signform__message ${isError ? 'signform__message_active' : "" }`}>При регистрации произошла ошибка.</span>
+                  <div className='signform__message-container signform__message-container_type_signup'>
+                    <span className={`signform__message signform__message_type_signup ${isError ? 'signform__message_active' : "" }`}>При регистрации произошла ошибка.</span>
                   </div>
                 )}
                 {type === 'signin' && (

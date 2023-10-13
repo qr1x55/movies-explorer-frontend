@@ -134,6 +134,10 @@
   justify-content: center;
 }
 
+.signform__message-container_type_signup{
+  margin-top: 80px;
+}
+
 .signform__message {
   visibility: hidden;
   min-height: 13px;
@@ -181,6 +185,10 @@
     margin-top: 239px;
   }
 
+  .signform__message-container_type_signup{
+    margin-top: 170px;
+  }
+
   .signform__link {
     font-size: 12px;
     line-height: 15px;
@@ -188,5 +196,12 @@
 
   .signform__error {
     top: 46px;
+  }
+
+  .signform__submit-btn {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
   }
 }
