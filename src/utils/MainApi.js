@@ -114,7 +114,7 @@ class MainApi {
 }
 
 const mainApi = new MainApi({
-  baseUrl: 'http://localhost:3000',
+  baseUrl: 'https://api.qr1xmovie.students.nomoredomainsrocks.ru',
 });
 
 export default mainApi
