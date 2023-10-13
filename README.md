@@ -12,3 +12,6 @@ https://www.figma.com/file/6FMWkB94wE7KTkcCgUXtnC/%D0%94%D0%B8%D0%BF%D0%BB%D0%BE
 * https://api.qr1xmovie.students.nomoredomainsrocks.ru
 ## Ссылка на для фронтэнда:
 * https://qr1xmovie.students.nomore.nomoredomainsrocks.ru
+
+## Ссылка на для пуллреквест:
+* https://github.com/qr1x55/movies-explorer-frontend/pull/2
