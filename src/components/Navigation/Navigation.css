@@ -12,7 +12,7 @@
 }
 
 .menu__cover_active {
-  display: block;
+  display: none;
   position: absolute;
   width: 768px;
   height: 100%;
@@ -101,7 +101,7 @@
   height: 30px;
   border-radius: 6px;
   background: url('./../../images/profile-icon.svg') no-repeat center;
-  background-color: #313131;
+  backdrop-filter: brightness(150%);
 }
 
 .menu__btn {
@@ -142,6 +142,10 @@
 @media(max-width: 768px) {
   .menu {
     width: auto;
+  }
+
+  .menu__cover_active {
+    display: block;
   }
 
   .menu__box {

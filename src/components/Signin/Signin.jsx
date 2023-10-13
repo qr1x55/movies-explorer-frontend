@@ -1,9 +1,7 @@
 import './Signin.css';
 import SignForm from "../SignForm/SignForm";
 
-function Signin({onLogin, infoMessage}){
-
-  //---РАЗМЕТКА JSX---
+function Signin({onSignin, setIsError}){
   return (
     <SignForm
       type='signin'
@@ -11,9 +9,9 @@ function Signin({onLogin, infoMessage}){
       title='Рады видеть!'
       btnName='Войти'
       subtitle='Ещё не зарегистрированы?'
-      onSubmit={onLogin}
+      onSubmit={onSignin}
       linkName='Регистрация'
-      infoMessage={infoMessage}
+      setIsError={setIsError}
     />
   );
 };

@@ -70,6 +70,7 @@
 }
 
 .signform__error {
+  max-width: 100%;
   font-weight: 400;
   font-size: 10px;
   line-height: 12px;
@@ -77,9 +78,13 @@
   position: absolute;
   top: 51px;
   left: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .signform__submit-btn {
+  margin-top: 20px;
   height: 45px;
   color: #fff;
   background: #4285F4;
@@ -102,7 +107,6 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
-
 }
 
 .signform__subtitle {
@@ -121,6 +125,28 @@
   font-size: 14px;
   line-height: 17px;
   color: #4285F4;
+}
+
+.signform__message-container {
+  margin-top: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.signform__message {
+  visibility: hidden;
+  min-height: 13px;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  color: #FF004C;
+  text-align: center;
+  margin: 0;
+}
+
+.signform__message_active {
+  visibility: visible;
 }
 
 @media (max-width: 768px) {
@@ -149,6 +175,10 @@
   .signform__subtitle {
     font-size: 12px;
     line-height: 15px;
+  }
+
+  .signform__message-container {
+    margin-top: 239px;
   }
 
   .signform__link {

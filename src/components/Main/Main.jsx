@@ -8,10 +8,10 @@ import Header from '../Header/Header.jsx';
 import Footer from '../Footer/Footer.jsx';
 import './Main.css'
 
-function Main() {
+function Main({loggedIn}) {
   return (
     <>
-      <Header isMain={true}/>
+      <Header loggedIn={loggedIn} isMain={true} />
       <main className="main">
         <Promo/>
         <AboutProject/>

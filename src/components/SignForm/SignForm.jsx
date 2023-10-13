@@ -1,10 +1,10 @@
 import './SignForm.css';
 import Logo from '../Logo/Logo';
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useFormValidator } from '../../hooks/useFormValidator';
-import Tooltip from '../Tooltip/Tooltip';
-
+import { EmailRegex } from '../../utils/constants';
+import { ErrorContext } from '../../contexts/ErrorContext';
 
 function SignForm({
     type,
@@ -13,13 +13,25 @@ function SignForm({
     btnName,
     linkName,
     subtitle,
-    tooltip,
+    onSubmit,
+    setIsError
 }) {
     const { values, errors, isValid, handleChange } = useFormValidator();
+    const isError = useContext(ErrorContext);
+
+    useEffect(() => {
+      setIsError(false)
+    }, [setIsError])
 
     function handleSubmit(e) {
         e.preventDefault();
-        console.log('Заглушка:Форма отправлена');
+        console.log(isError)
+        if (type === 'signup') {
+          onSubmit(values.username, values.email, values.password)
+        } else {
+          onSubmit(values.email, values.password)
+        }
+        
     };
 
     return (
@@ -31,21 +43,21 @@ function SignForm({
                     {type === 'signup' && (
                         <label className='signform__label'>Имя
                             <input
-                                id='name'
+                                id='username'
                                 type='text'
                                 className='signform__input'
-                                name='name'
+                                name='username'
                                 minLength='2'
                                 maxLength='30'
                                 required
                                 placeholder="Введите ваше имя"
                                 title="Введите ваше имя"
-                                value={values.name || ''}
+                                value={values.username || ''}
                                 onChange={handleChange}
                                 
                             />
                             <span id='name-error' className='signform__error'>
-                                    {errors.name ? `Что-то пошло не так...` : ''}
+                                    {errors.name ? `${errors.name}` : ''}
                             </span>
                         </label>
                     )}
@@ -57,6 +69,7 @@ function SignForm({
                             name='email'
                             minLength='2'
                             maxLength='30'
+                            pattern={EmailRegex}
                             required
                             placeholder="Укажите ваш email"
                             title="Укажите ваш email"
@@ -65,7 +78,7 @@ function SignForm({
 
                         />
                         <span id='email-error' className='signform__error'>
-                            {errors.email ? `Что-то пошло не так...` : ''}
+                            {errors.email ? `${errors.email}` : ''}
                         </span>
                     </label>
                     <label className='signform__label'>Пароль
@@ -83,11 +96,20 @@ function SignForm({
                             title="Введите пароль"
                         />
                         <span id='password-error' className='signform__error'>
-                            {errors.password ? `Что-то пошло не так...` : ''}
+                            {errors.password ? `${errors.password}` : ''}
                         </span>
                     </label>
-                    <Tooltip {...tooltip} />
                 </div>
+                {type === 'signup' && (
+                  <div className='signform__message-container'>
+                    <span className={`signform__message ${isError ? 'signform__message_active' : "" }`}>При регистрации произошла ошибка.</span>
+                  </div>
+                )}
+                {type === 'signin' && (
+                  <div className='signform__message-container'>
+                    <span className={`signform__message ${isError ? 'signform__message_active' : "" }`}>При входе произошла ошибка.</span>
+                  </div>
+                )}
                 <button
                     className={`signform__submit-btn link ${type === 'signup' && 'signform__login-btn'}`}
                     type='submit'

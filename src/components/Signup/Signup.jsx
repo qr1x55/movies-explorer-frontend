@@ -1,8 +1,7 @@
 import './Signup.css';
 import SignForm from '../SignForm/SignForm';
 
-
-function Signup({ onSignup, infoMessage }){
+function Signup({ onSignup, setIsError }){
   return (
     <SignForm
       type='signup'
@@ -12,7 +11,7 @@ function Signup({ onSignup, infoMessage }){
       subtitle='Уже зарегистрированы?'
       linkName='Войти'
       onSubmit={onSignup}
-      infoMessage={infoMessage}
+      setIsError={setIsError}
     />
   );
 };

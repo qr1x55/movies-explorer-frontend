@@ -4,12 +4,12 @@ import ProfileForm from './ProfileForm/ProfileForm.jsx';
 
 
 
-function ProfilePage({infoMessage}) {
+function ProfilePage({ onEdit, onSignOut, isSuccess, setIsSuccess}) {
   return (
     <>
       <Header loggedIn={true}/>
       <main className='profile'>
-        <ProfileForm infoMessage={infoMessage}/>
+        <ProfileForm  onSignOut={onSignOut} setIsSuccess={setIsSuccess} isSuccess={isSuccess} onEdit={onEdit}/>
       </main>
     </>
   );
