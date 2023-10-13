@@ -25,7 +25,6 @@ function SignForm({
 
     function handleSubmit(e) {
         e.preventDefault();
-        console.log(isError)
         if (type === 'signup') {
           onSubmit(values.username, values.email, values.password)
         } else {

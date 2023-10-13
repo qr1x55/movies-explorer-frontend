@@ -109,7 +109,6 @@ function App() {
   function toggleMovie(data) {
     const addedMOvie = savedMovies.some(movie => data.id === movie.movieId)
     const findMovie = savedMovies.filter((movie) => {return movie.movieId === data.id})
-    console.log(findMovie)
     if (addedMOvie) {
       deleteMovie(findMovie[0]._id)
     } else {
